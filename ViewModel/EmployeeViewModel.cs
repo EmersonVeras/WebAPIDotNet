@@ -4,5 +4,7 @@ namespace TaskSystem.ViewModel
     {
         public string name { get; set;}
         public int age { get; set;}
+
+        public IFormFile photo { get; set; }
     }
 }
