@@ -44,3 +44,5 @@
 /home/emersondev/Documents/dev/dotnet/TaskSystemAPI/bin/Debug/net7.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 /home/emersondev/Documents/dev/dotnet/TaskSystemAPI/bin/Debug/net7.0/Microsoft.IdentityModel.Tokens.dll
 /home/emersondev/Documents/dev/dotnet/TaskSystemAPI/bin/Debug/net7.0/System.IdentityModel.Tokens.Jwt.dll
+/home/emersondev/Documents/dev/dotnet/TaskSystemAPI/bin/Debug/net7.0/AutoMapper.dll
+/home/emersondev/Documents/dev/dotnet/TaskSystemAPI/bin/Debug/net7.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll

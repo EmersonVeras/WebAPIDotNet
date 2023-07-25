@@ -1,7 +1,9 @@
-using Microsoft.AspNetCore.Mvc;
 using TaskSystem.Domain.Models;
+using TaskSystem.Domain.DTOs;
 using TaskSystem.Application.ViewModel;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Authorization;
+using AutoMapper;
 
 namespace TaskSystem.Controllers
 {
@@ -12,11 +14,15 @@ namespace TaskSystem.Controllers
     {
         private readonly IEmployeeRepository _employeeRepository;
         private readonly ILogger<EmployeeController> _logger;
+        private readonly IMapper _mapper;
 
-        public EmployeeController(IEmployeeRepository employeeRepository, ILogger<EmployeeController> logger)
+
+        public EmployeeController(IEmployeeRepository employeeRepository, ILogger<EmployeeController> logger, IMapper mapper)
         {
             _employeeRepository = employeeRepository ?? throw new ArgumentNullException(nameof(employeeRepository));
             _logger = logger ?? throw new ArgumentNullException(nameof(logger));
+            _mapper = mapper ?? throw new ArgumentNullException(nameof(mapper));
+
         }
 
         [Authorize]
@@ -52,6 +58,19 @@ namespace TaskSystem.Controllers
             return Ok(employees);
         }
 
+        [HttpGet]
+        [Route("{id}")]
+        public IActionResult Search(int id)
+        {
+            // _logger.Log(LogLevel.Error, "Errorrrrrr");
+
+            // throw new Exception("Erro de teste");
+
+            var employees = _employeeRepository.Get(id);
+            var employeesDTOS = _mapper.Map<EmployeeDTO>(employees);
+
+            return Ok(employeesDTOS);
+        }
 
         [Authorize]
         [HttpPost]
