@@ -1,4 +1,4 @@
-namespace TaskSystem.ViewModel
+namespace TaskSystem.Application.ViewModel
 {
     public class EmployeeViewModel
     {

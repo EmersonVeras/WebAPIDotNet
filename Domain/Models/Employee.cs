@@ -1,7 +1,6 @@
-using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace TaskSystem.Models
+namespace TaskSystem.Domain.Models
 {
     [Table("employee")]
     public class Employee

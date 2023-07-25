@@ -1,8 +1,8 @@
 using Microsoft.EntityFrameworkCore;
 using Npgsql.EntityFrameworkCore.PostgreSQL;
-using TaskSystem.Models;
+using TaskSystem.Domain.Models;
 
-namespace TaskSystem.Config
+namespace TaskSystem.Infrastructure
 {    
     public class ConnectionContext : DbContext
     {
